@@ -1,0 +1,1930 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KirimAja - Ekspedisi Terpercaya Indonesia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header & Navigation */
+        .top-bar {
+            background: #1a1a2e;
+            color: white;
+            padding: 0.5rem 0;
+            font-size: 0.85rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Main Header */
+        .main-header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+        }
+
+        .logo-text {
+            color: #1a1a2e;
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin: 0;
+            line-height: 1;
+        }
+
+        .logo-text span {
+            font-size: 0.75rem;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .main-nav {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .main-nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .main-nav a:hover,
+        .main-nav a.active {
+            color: #ff6b35;
+        }
+
+        .main-nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -27px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: #ff6b35;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: rgba(255, 107, 53, 0.1);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text h2 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-text h2 span {
+            color: #ff6b35;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: #a0a0a0;
+            margin-bottom: 2rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            color: #ff6b35;
+            font-weight: 800;
+        }
+
+        .stat-item p {
+            font-size: 0.9rem;
+            color: #888;
+            margin: 0;
+        }
+
+        /* Tracking Box */
+        .tracking-box {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .tracking-box h3 {
+            color: #1a1a2e;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .tracking-box p {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tracking-input-group {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .tracking-input {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .tracking-input:focus {
+            outline: none;
+            border-color: #ff6b35;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            color: white;
+            border: none;
+            padding: 1rem 2.5rem;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #ff6b35;
+            border: 2px solid #ff6b35;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: #ff6b35;
+            color: white;
+        }
+
+        /* Page Sections */
+        .page-section {
+            display: none;
+            padding: 3rem 0;
+            min-height: calc(100vh - 300px);
+        }
+
+        .page-section.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: #1a1a2e;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        /* Form Styles */
+        .form-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 0;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #333;
+            font-size: 0.9rem;
+        }
+
+        .required::after {
+            content: ' *';
+            color: #ff6b35;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            font-family: inherit;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #ff6b35;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-hint {
+            font-size: 0.8rem;
+            color: #888;
+            margin-top: 0.25rem;
+        }
+
+        /* Service Options */
+        .service-options {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .service-option {
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 1.25rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .service-option:hover,
+        .service-option.selected {
+            border-color: #ff6b35;
+            background: #fff5f0;
+        }
+
+        .service-option.selected {
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.2);
+        }
+
+        .service-option h4 {
+            color: #1a1a2e;
+            margin-bottom: 0.25rem;
+        }
+
+        .service-option p {
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        .service-option .price {
+            color: #ff6b35;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Result Cards */
+        .resi-result-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-top: 2rem;
+            border-left: 5px solid #ff6b35;
+            display: none;
+        }
+
+        .resi-result-card.show {
+            display: block;
+            animation: slideUp 0.5s ease;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .resi-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .resi-number-display {
+            background: white;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            border: 2px dashed #ff6b35;
+            text-align: center;
+        }
+
+        .resi-number-display h4 {
+            font-size: 0.8rem;
+            color: #666;
+            margin-bottom: 0.25rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .resi-number-display .number {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: #ff6b35;
+            font-family: 'Courier New', monospace;
+            letter-spacing: 2px;
+        }
+
+        .resi-meta {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .resi-meta-item {
+            text-align: right;
+        }
+
+        .resi-meta-item h5 {
+            font-size: 0.75rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.25rem;
+        }
+
+        .resi-meta-item p {
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+
+        .resi-details-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .detail-card {
+            background: white;
+            padding: 1.25rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .detail-card h5 {
+            font-size: 0.75rem;
+            color: #888;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .detail-card p {
+            font-weight: 700;
+            color: #1a1a2e;
+            font-size: 1rem;
+        }
+
+        /* Tracking Result */
+        .tracking-result-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+            display: none;
+        }
+
+        .tracking-result-container.show {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .tracking-header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 2rem;
+        }
+
+        .tracking-header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .tracking-main-info h3 {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .tracking-main-info .tracking-number {
+            font-size: 2rem;
+            font-weight: 800;
+            font-family: 'Courier New', monospace;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .status-diproses { background: #fef3c7; color: #d97706; }
+        .status-dikirim { background: #dbeafe; color: #2563eb; }
+        .status-terkirim { background: #d1fae5; color: #059669; }
+
+        .tracking-info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .tracking-info-item h4 {
+            font-size: 0.8rem;
+            opacity: 0.7;
+            margin-bottom: 0.25rem;
+            font-weight: 500;
+        }
+
+        .tracking-info-item p {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        /* Timeline */
+        .tracking-timeline {
+            padding: 2rem;
+            position: relative;
+        }
+
+        .timeline-list {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline-list::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #ff6b35, #f7931e);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 2rem;
+            padding-left: 1.5rem;
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -1.5rem;
+            top: 0;
+            width: 18px;
+            height: 18px;
+            background: white;
+            border: 4px solid #ff6b35;
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px rgba(255, 107, 53, 0.2);
+        }
+
+        .timeline-item.completed::before {
+            background: #ff6b35;
+        }
+
+        .timeline-item.current::before {
+            background: #1a1a2e;
+            border-color: #ff6b35;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 4px rgba(255, 107, 53, 0.2); }
+            50% { box-shadow: 0 0 0 8px rgba(255, 107, 53, 0.1); }
+        }
+
+        .timeline-content {
+            background: #f8f9fa;
+            padding: 1.25rem;
+            border-radius: 12px;
+            border-left: 3px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .timeline-item.current .timeline-content {
+            background: #fff5f0;
+            border-left-color: #ff6b35;
+        }
+
+        .timeline-date {
+            font-size: 0.85rem;
+            color: #ff6b35;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .timeline-status {
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 0.25rem;
+            font-size: 1.1rem;
+        }
+
+        .timeline-location {
+            color: #666;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Features Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: #1a1a2e;
+        }
+
+        .feature-card p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Table Styles */
+        .data-table {
+            width: 100%;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .data-table-header {
+            background: #1a1a2e;
+            color: white;
+            padding: 1.25rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .data-table-header h3 {
+            font-size: 1.1rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        th {
+            background: #f8f9fa;
+            font-weight: 700;
+            color: #1a1a2e;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        td {
+            font-size: 0.9rem;
+        }
+
+        tr:hover {
+            background: #f8f9fa;
+        }
+
+        .table-status {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .btn-table {
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
+        }
+
+        /* Admin Panel */
+        .admin-panel {
+            background: #1a1a2e;
+            color: white;
+            border-radius: 16px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .admin-header h3 {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #ff6b35;
+        }
+
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-box {
+            background: rgba(255,255,255,0.05);
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .stat-box h4 {
+            font-size: 2rem;
+            color: #ff6b35;
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-box p {
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+        /* Toast */
+        .toast-container {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 3000;
+        }
+
+        .toast {
+            background: white;
+            color: #333;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transform: translateX(400px);
+            opacity: 0;
+            transition: all 0.3s ease;
+            border-left: 4px solid;
+        }
+
+        .toast.show {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .toast.success { border-left-color: #48bb78; }
+        .toast.error { border-left-color: #f56565; }
+        .toast.info { border-left-color: #4299e1; }
+
+        /* Footer */
+        .footer {
+            background: #1a1a2e;
+            color: white;
+            padding: 3rem 0 1.5rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #ff6b35;
+        }
+
+        .footer-brand p {
+            color: #888;
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+
+        .footer-links h4 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: #888;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #ff6b35;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 1.5rem;
+            text-align: center;
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text h2 {
+                font-size: 2rem;
+            }
+
+            .form-grid,
+            .resi-details-grid,
+            .features-grid,
+            .stats-row {
+                grid-template-columns: 1fr;
+            }
+
+            .service-options {
+                grid-template-columns: 1fr;
+            }
+
+            .main-nav {
+                display: none;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        /* Loading Animation */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Print Styles */
+        @media print {
+            .navbar, .hero, .footer, .btn-primary, .admin-panel {
+                display: none !important;
+            }
+            
+            .resi-result-card {
+                display: block !important;
+                box-shadow: none;
+                border: 2px solid #000;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="contact-info">
+                    <span>📞 1500-123 (Gratis)</span>
+                    <span>✉️ cs@kirimaja.co.id</span>
+                    <span>🕐 Senin-Minggu: 08.00-20.00 WIB</span>
+                </div>
+                <div>
+                    <span>Tracking Internasional</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo" onclick="showPage('home')">
+                    <div class="logo-icon">KA</div>
+                    <div class="logo-text">
+                        <h1>KIRIM<span style="color:#ff6b35">AJA</span></h1>
+                        <span>Pengiriman Cepat & Terpercaya</span>
+                    </div>
+                </a>
+                <nav>
+                    <ul class="main-nav">
+                        <li><a href="#" class="nav-link active" data-page="home">Beranda</a></li>
+                        <li><a href="#" class="nav-link" data-page="cek-resi">Cek Resi</a></li>
+                        <li><a href="#" class="nav-link" data-page="kirim-paket">Kirim Paket</a></li>
+                        <li><a href="#" class="nav-link" data-page="daftar-pengiriman">Daftar Pengiriman</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section / Home -->
+    <section id="home" class="page-section active">
+        <div class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h2>Pengiriman <span>Cepat</span> & <span>Aman</span><br>Seluruh Indonesia</h2>
+                        <p>KirimAja adalah solusi pengiriman terpercaya dengan jaringan terluas di Indonesia. Real-time tracking dan garansi keamanan paket.</p>
+                        <button class="btn-primary" onclick="showPage('kirim-paket')" style="font-size: 1.1rem; padding: 1.25rem 3rem;">
+                            Kirim Paket Sekarang →
+                        </button>
+                        
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <h3>500+</h3>
+                                <p>Kota Tujuan</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>2jt+</h3>
+                                <p>Paket Terkirim</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>99%</h3>
+                                <p>Kepuasan Pelanggan</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tracking-box">
+                        <h3>📦 Lacak Pengiriman</h3>
+                        <p>Masukkan nomor resi untuk melihat status paket Anda</p>
+                        <form id="quickTrackingForm" onsubmit="handleQuickTrack(event)">
+                            <div class="tracking-input-group">
+                                <input type="text" class="tracking-input" id="quickTrackInput" placeholder="Contoh: KA-20240312-XXXXX" required>
+                                <button type="submit" class="btn-primary">Lacak</button>
+                            </div>
+                        </form>
+                        <div style="margin-top: 1rem; font-size: 0.85rem; color: #666;">
+                            <span style="color: #ff6b35;">💡 Tip:</span> Nomor resi otomatis tersimpan setelah pengiriman
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Express Delivery</h3>
+                    <p>Pengiriman 1-2 hari ke kota besar</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Real-time Tracking</h3>
+                    <p>Pantau paket 24/7 dari gadget Anda</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Asuransi Gratis</h3>
+                    <p>Garansi keamanan hingga Rp 1 juta</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Harga Terjangkau</h3>
+                    <p>Mulai dari Rp 10.000/kg</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cek Resi Page -->
+    <section id="cek-resi" class="page-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Lacak Pengiriman</h2>
+                <p>Masukkan nomor resi untuk melihat status dan riwayat perjalanan paket</p>
+            </div>
+
+            <div class="form-card" style="max-width: 600px;">
+                <form id="formCekResi" onsubmit="handleCekResi(event)">
+                    <div class="form-group full-width">
+                        <label class="required">Nomor Resi</label>
+                        <div style="display: flex; gap: 1rem;">
+                            <input type="text" id="inputResi" placeholder="KA-YYYYMMDD-XXXXX" style="flex: 1; font-family: monospace; font-size: 1.1rem;">
+                            <button type="submit" class="btn-primary" style="width: auto;">Cek Status</button>
+                        </div>
+                        <p class="form-hint">Masukkan nomor resi lengkap atau scan barcode</p>
+                    </div>
+                </form>
+            </div>
+
+            <div id="trackingResult" class="tracking-result-container" style="margin-top: 2rem;">
+                <!-- Result will be rendered here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Kirim Paket Page -->
+    <section id="kirim-paket" class="page-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Kirim Paket</h2>
+                <p>Isi detail pengiriman untuk membuat resi baru</p>
+            </div>
+
+            <div class="form-card">
+                <form id="formBuatResi" onsubmit="handleBuatResi(event)">
+                    <h3 style="margin-bottom: 1.5rem; color: #1a1a2e; display: flex; align-items: center; gap: 0.5rem;">
+                        <span style="background: #ff6b35; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.9rem;">1</span>
+                        Data Pengirim
+                    </h3>
+                    <div class="form-grid" style="margin-bottom: 2rem;">
+                        <div class="form-group">
+                            <label class="required">Nama Lengkap</label>
+                            <input type="text" id="namaPengirim" required placeholder="Nama pengirim">
+                        </div>
+                        <div class="form-group">
+                            <label class="required">Nomor Telepon</label>
+                            <input type="tel" id="telpPengirim" required placeholder="08xxxxxxxxxx">
+                        </div>
+                        <div class="form-group full-width">
+                            <label class="required">Alamat Lengkap</label>
+                            <textarea id="alamatPengirim" required placeholder="Jl. Nama Jalan No. XX, Kelurahan, Kecamatan, Kota"></textarea>
+                        </div>
+                    </div>
+
+                    <h3 style="margin-bottom: 1.5rem; color: #1a1a2e; display: flex; align-items: center; gap: 0.5rem;">
+                        <span style="background: #ff6b35; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.9rem;">2</span>
+                        Data Penerima
+                    </h3>
+                    <div class="form-grid" style="margin-bottom: 2rem;">
+                        <div class="form-group">
+                            <label class="required">Nama Lengkap</label>
+                            <input type="text" id="namaPenerima" required placeholder="Nama penerima">
+                        </div>
+                        <div class="form-group">
+                            <label class="required">Nomor Telepon</label>
+                            <input type="tel" id="telpPenerima" required placeholder="08xxxxxxxxxx">
+                        </div>
+                        <div class="form-group full-width">
+                            <label class="required">Alamat Tujuan</label>
+                            <textarea id="alamatPenerima" required placeholder="Jl. Nama Jalan No. XX, Kelurahan, Kecamatan, Kota, Kode Pos"></textarea>
+                        </div>
+                    </div>
+
+                    <h3 style="margin-bottom: 1.5rem; color: #1a1a2e; display: flex; align-items: center; gap: 0.5rem;">
+                        <span style="background: #ff6b35; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.9rem;">3</span>
+                        Detail Paket
+                    </h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="required">Jenis Layanan</label>
+                            <div class="service-options">
+                                <div class="service-option" onclick="selectService('Reguler', 10000, this)">
+                                    <h4>📦 Reguler</h4>
+                                    <p>3-5 Hari Kerja</p>
+                                    <div class="price">Rp 10.000/kg</div>
+                                </div>
+                                <div class="service-option selected" onclick="selectService('Express', 20000, this)">
+                                    <h4>⚡ Express</h4>
+                                    <p>1-2 Hari Kerja</p>
+                                    <div class="price">Rp 20.000/kg</div>
+                                </div>
+                                <div class="service-option" onclick="selectService('Same Day', 50000, this)">
+                                    <h4>🚀 Same Day</h4>
+                                    <p>Sehari Sampai</p>
+                                    <div class="price">Rp 50.000/kg</div>
+                                </div>
+                            </div>
+                            <input type="hidden" id="selectedService" value="Express">
+                            <input type="hidden" id="selectedPrice" value="20000">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="required">Berat Paket (kg)</label>
+                            <input type="number" id="beratPaket" step="0.1" min="0.1" required placeholder="0.0" onchange="hitungTotal()">
+                            <p class="form-hint">Minimal 0.1 kg, dibulatkan ke atas</p>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label>Isi Paket (Opsional)</label>
+                            <input type="text" id="isiPaket" placeholder="Contoh: Pakaian, Dokumen, Elektronik">
+                        </div>
+
+                        <div class="form-group full-width">
+                            <div style="background: #fff5f0; padding: 1.5rem; border-radius: 12px; display: flex; justify-content: space-between; align-items: center;">
+                                <div>
+                                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 0.25rem;">Estimasi Biaya Pengiriman</p>
+                                    <h3 style="color: #ff6b35; font-size: 1.75rem;" id="totalBiaya">Rp 0</h3>
+                                </div>
+                                <button type="submit" class="btn-primary" style="font-size: 1.1rem; padding: 1rem 3rem;">
+                                    Buat Resi →
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <div id="hasilResi" class="resi-result-card">
+                    <div class="resi-header">
+                        <div class="resi-number-display" onclick="copyResi()" style="cursor: pointer;">
+                            <h4>Nomor Resi</h4>
+                            <div class="number" id="displayNomorResi">KA-20240312-ABCD</div>
+                        </div>
+                        <div class="resi-meta">
+                            <div class="resi-meta-item">
+                                <h5>Tanggal</h5>
+                                <p id="displayTanggal">12 Mar 2024</p>
+                            </div>
+                            <div class="resi-meta-item">
+                                <h5>Layanan</h5>
+                                <p id="displayLayanan">Express</p>
+                            </div>
+                            <div class="resi-meta-item">
+                                <h5>Status</h5>
+                                <p style="color: #ff6b35; font-weight: 800;">Diproses</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 1.5rem;">
+                        <div style="background: white; padding: 1.5rem; border-radius: 12px;">
+                            <h5 style="color: #888; font-size: 0.8rem; margin-bottom: 0.5rem;">📤 PENGIRIM</h5>
+                            <p style="font-weight: 700; color: #1a1a2e; margin-bottom: 0.25rem;" id="displayPengirim">Nama Pengirim</p>
+                            <p style="font-size: 0.9rem; color: #666;" id="displayTelpPengirim">08123456789</p>
+                            <p style="font-size: 0.85rem; color: #888; margin-top: 0.5rem;" id="displayAlamatPengirim">Alamat pengirim</p>
+                        </div>
+                        <div style="background: white; padding: 1.5rem; border-radius: 12px;">
+                            <h5 style="color: #888; font-size: 0.8rem; margin-bottom: 0.5rem;">📥 PENERIMA</h5>
+                            <p style="font-weight: 700; color: #1a1a2e; margin-bottom: 0.25rem;" id="displayPenerima">Nama Penerima</p>
+                            <p style="font-size: 0.9rem; color: #666;" id="displayTelpPenerima">08987654321</p>
+                            <p style="font-size: 0.85rem; color: #888; margin-top: 0.5rem;" id="displayAlamatPenerima">Alamat penerima</p>
+                        </div>
+                    </div>
+
+                    <div class="resi-details-grid">
+                        <div class="detail-card">
+                            <h5>Berat</h5>
+                            <p id="displayBerat">2.5 kg</p>
+                        </div>
+                        <div class="detail-card">
+                            <h5>Isi Paket</h5>
+                            <p id="displayIsi">Pakaian</p>
+                        </div>
+                        <div class="detail-card">
+                            <h5>Biaya</h5>
+                            <p id="displayBiaya" style="color: #ff6b35;">Rp 50.000</p>
+                        </div>
+                        <div class="detail-card">
+                            <h5>Estimasi Tiba</h5>
+                            <p id="displayEstimasi">14 Mar 2024</p>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 2rem; display: flex; gap: 1rem;">
+                        <button class="btn-secondary" onclick="resetForm()" style="flex: 1;">Buat Resi Baru</button>
+                        <button class="btn-primary" onclick="cekResiIni()" style="flex: 1;">Lacak Resi Ini</button>
+                    </div>
+                </div>
+
+                <!-- Admin Panel Update Status -->
+                <div class="admin-panel">
+                    <div class="admin-header">
+                        <h3>⚙️ Panel Admin - Update Status Pengiriman</h3>
+                        <span style="font-size: 0.85rem; color: #888;">Internal Use Only</span>
+                    </div>
+                    
+                    <div class="stats-row">
+                        <div class="stat-box">
+                            <h4 id="statTotal">0</h4>
+                            <p>Total Resi</p>
+                        </div>
+                        <div class="stat-box">
+                            <h4 id="statProses">0</h4>
+                            <p>Diproses</p>
+                        </div>
+                        <div class="stat-box">
+                            <h4 id="statKirim">0</h4>
+                            <p>Dikirim</p>
+                        </div>
+                        <div class="stat-box">
+                            <h4 id="statSelesai">0</h4>
+                            <p>Terkirim</p>
+                        </div>
+                    </div>
+
+                    <form onsubmit="handleUpdateStatus(event)" style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 12px;">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label style="color: #888;">Nomor Resi</label>
+                                <input type="text" id="updateNomorResi" placeholder="KA-YYYYMMDD-XXXXX" style="background: rgba(255,255,255,0.1); color: white; border-color: rgba(255,255,255,0.2);">
+                            </div>
+                            <div class="form-group">
+                                <label style="color: #888;">Status Baru</label>
+                                <select id="updateStatus" style="background: rgba(255,255,255,0.1); color: white; border-color: rgba(255,255,255,0.2);">
+                                    <option value="">Pilih Status</option>
+                                    <option value="Paket Diterima di Counter">Paket Diterima di Counter</option>
+                                    <option value="Sedang Diproses">Sedang Diproses</option>
+                                    <option value="Paket Dikemas">Paket Dikemas</option>
+                                    <option value="Dikirim ke Sortir Hub">Dikirim ke Sortir Hub</option>
+                                    <option value="Tiba di Sortir Hub">Tiba di Sortir Hub</option>
+                                    <option value="Dalam Perjalanan ke Kota Tujuan">Dalam Perjalanan ke Kota Tujuan</option>
+                                    <option value="Tiba di Hub Tujuan">Tiba di Hub Tujuan</option>
+                                    <option value="Out for Delivery">Out for Delivery (Dalam Pengantaran)</option>
+                                    <option value="Terkirim">Terkirim (Diterima Penerima)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label style="color: #888;">Lokasi/HUB</label>
+                                <input type="text" id="updateLokasi" placeholder="Contoh: Jakarta, Bandung, Surabaya" style="background: rgba(255,255,255,0.1); color: white; border-color: rgba(255,255,255,0.2);">
+                            </div>
+                            <div class="form-group">
+                                <label style="color: #888;">Keterangan (Opsional)</label>
+                                <input type="text" id="updateKeterangan" placeholder="Nama Kurir, dll" style="background: rgba(255,255,255,0.1); color: white; border-color: rgba(255,255,255,0.2);">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-primary" style="margin-top: 1rem; width: auto; background: #48bb78;">
+                            Update Status →
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daftar Pengiriman Page -->
+    <section id="daftar-pengiriman" class="page-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Daftar Pengiriman</h2>
+                <p>Semua resi yang telah dibuat tersimpan dalam sistem</p>
+            </div>
+
+            <div class="data-table">
+                <div class="data-table-header">
+                    <h3>📋 Riwayat Pengiriman</h3>
+                    <button class="btn-secondary btn-table" onclick="loadDaftarResi()">🔄 Refresh</button>
+                </div>
+                <div style="overflow-x: auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>No. Resi</th>
+                                <th>Tanggal</th>
+                                <th>Pengirim → Penerima</th>
+                                <th>Layanan</th>
+                                <th>Status</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabelResi">
+                            <tr>
+                                <td colspan="6" style="text-align: center; padding: 3rem; color: #888;">
+                                    Belum ada data pengiriman
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>KIRIM<span style="color: white;">AJA</span></h3>
+                    <p>KirimAja adalah perusahaan ekspedisi terpercaya di Indonesia dengan layanan pengiriman cepat, aman, dan terjangkau ke seluruh pelosok Nusantara.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Layanan</h4>
+                    <ul>
+                        <li><a href="#">Reguler</a></li>
+                        <li><a href="#">Express</a></li>
+                        <li><a href="#">Same Day</a></li>
+                        <li><a href="#">Cargo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Informasi</h4>
+                    <ul>
+                        <li><a href="#">Cek Ongkir</a></li>
+                        <li><a href="#">Lacak Resi</a></li>
+                        <li><a href="#">Cabang Kami</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Bantuan</h4>
+                    <ul>
+                        <li><a href="#">Hubungi Kami</a></li>
+                        <li><a href="#">Syarat & Ketentuan</a></li>
+                        <li><a href="#">Kebijakan Privasi</a></li>
+                        <li><a href="#">Karir</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 KirimAja. All rights reserved. | Terdaftar di Kementerian Perhubungan RI</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script>
+        // Database System
+        const Database = {
+            key: 'kirimaja_database',
+            
+            getAll() {
+                return JSON.parse(localStorage.getItem(this.key)) || {};
+            },
+            
+            save(id, data) {
+                const db = this.getAll();
+                db[id] = data;
+                localStorage.setItem(this.key, JSON.stringify(db));
+                return true;
+            },
+            
+            get(id) {
+                return this.getAll()[id] || null;
+            },
+            
+            update(id, updates) {
+                const db = this.getAll();
+                if (db[id]) {
+                    db[id] = { ...db[id], ...updates };
+                    localStorage.setItem(this.key, JSON.stringify(db));
+                    return true;
+                }
+                return false;
+            },
+            
+            addHistory(id, historyItem) {
+                const db = this.getAll();
+                if (db[id]) {
+                    if (!db[id].history) db[id].history = [];
+                    db[id].history.unshift(historyItem);
+                    db[id].lastUpdate = new Date().toISOString();
+                    localStorage.setItem(this.key, JSON.stringify(db));
+                    return true;
+                }
+                return false;
+            },
+            
+            getStats() {
+                const all = Object.values(this.getAll());
+                return {
+                    total: all.length,
+                    diproses: all.filter(r => r.status === 'Diproses').length,
+                    dikirim: all.filter(r => ['Dikirim', 'Dalam Perjalanan', 'Out for Delivery'].includes(r.status)).length,
+                    terkirim: all.filter(r => r.status === 'Terkirim').length
+                };
+            }
+        };
+
+        // Navigation
+        function showPage(pageId) {
+            document.querySelectorAll('.page-section').forEach(p => p.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+            
+            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+            document.querySelector(`[data-page="${pageId}"]`)?.classList.add('active');
+            
+            if (pageId === 'daftar-pengiriman') loadDaftarResi();
+            if (pageId === 'kirim-paket') updateStats();
+        }
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                showPage(link.getAttribute('data-page'));
+            });
+        });
+
+        // Generate Resi Number
+        function generateResiNumber() {
+            const date = new Date();
+            const dateStr = date.getFullYear() + 
+                          String(date.getMonth() + 1).padStart(2, '0') + 
+                          String(date.getDate()).padStart(2, '0');
+            const random = Math.random().toString(36).substring(2, 7).toUpperCase();
+            return `KA-${dateStr}-${random}`;
+        }
+
+        // Select Service
+        function selectService(service, price, element) {
+            document.querySelectorAll('.service-option').forEach(el => el.classList.remove('selected'));
+            element.classList.add('selected');
+            document.getElementById('selectedService').value = service;
+            document.getElementById('selectedPrice').value = price;
+            hitungTotal();
+        }
+
+        // Hitung Total
+        function hitungTotal() {
+            const berat = parseFloat(document.getElementById('beratPaket').value) || 0;
+            const harga = parseInt(document.getElementById('selectedPrice').value) || 0;
+            const total = Math.ceil(berat) * harga;
+            document.getElementById('totalBiaya').textContent = formatRupiah(total);
+            return total;
+        }
+
+        // Format Rupiah
+        function formatRupiah(angka) {
+            return 'Rp ' + angka.toLocaleString('id-ID');
+        }
+
+        // Handle Buat Resi
+        function handleBuatResi(e) {
+            e.preventDefault();
+            
+            const nomorResi = generateResiNumber();
+            const layanan = document.getElementById('selectedService').value;
+            const berat = parseFloat(document.getElementById('beratPaket').value);
+            const biaya = hitungTotal();
+            
+            // Hitung estimasi tiba
+            const estimasi = new Date();
+            if (layanan === 'Reguler') estimasi.setDate(estimasi.getDate() + 4);
+            else if (layanan === 'Express') estimasi.setDate(estimasi.getDate() + 2);
+            else estimasi.setDate(estimasi.getDate() + 1);
+            
+            const data = {
+                nomor: nomorResi,
+                pengirim: document.getElementById('namaPengirim').value,
+                telpPengirim: document.getElementById('telpPengirim').value,
+                alamatPengirim: document.getElementById('alamatPengirim').value,
+                penerima: document.getElementById('namaPenerima').value,
+                telpPenerima: document.getElementById('telpPenerima').value,
+                alamatPenerima: document.getElementById('alamatPenerima').value,
+                layanan: layanan,
+                berat: berat + ' kg',
+                isiPaket: document.getElementById('isiPaket').value || '-',
+                biaya: biaya,
+                tanggal: new Date().toISOString(),
+                estimasiTiba: estimasi.toISOString(),
+                status: 'Diproses',
+                history: [{
+                    tanggal: new Date().toLocaleString('id-ID'),
+                    status: 'Resi Dibuat - Menunggu Pickup',
+                    lokasi: document.getElementById('alamatPengirim').value.split(',')[0] || 'Origin',
+                    completed: true
+                }]
+            };
+            
+            if (Database.save(nomorResi, data)) {
+                // Display Result
+                document.getElementById('displayNomorResi').textContent = nomorResi;
+                document.getElementById('displayTanggal').textContent = new Date().toLocaleDateString('id-ID');
+                document.getElementById('displayLayanan').textContent = layanan;
+                document.getElementById('displayPengirim').textContent = data.pengirim;
+                document.getElementById('displayTelpPengirim').textContent = data.telpPengirim;
+                document.getElementById('displayAlamatPengirim').textContent = data.alamatPengirim;
+                document.getElementById('displayPenerima').textContent = data.penerima;
+                document.getElementById('displayTelpPenerima').textContent = data.telpPenerima;
+                document.getElementById('displayAlamatPenerima').textContent = data.alamatPenerima;
+                document.getElementById('displayBerat').textContent = data.berat;
+                document.getElementById('displayIsi').textContent = data.isiPaket;
+                document.getElementById('displayBiaya').textContent = formatRupiah(biaya);
+                document.getElementById('displayEstimasi').textContent = estimasi.toLocaleDateString('id-ID');
+                
+                document.getElementById('hasilResi').classList.add('show');
+                document.getElementById('formBuatResi').style.display = 'none';
+                
+                updateStats();
+                showToast('Resi berhasil dibuat! Nomor: ' + nomorResi, 'success');
+            }
+        }
+
+        // Copy Resi
+        function copyResi() {
+            const nomor = document.getElementById('displayNomorResi').textContent;
+            navigator.clipboard.writeText(nomor);
+            showToast('Nomor resi disalin: ' + nomor, 'success');
+        }
+
+        // Reset Form
+        function resetForm() {
+            document.getElementById('formBuatResi').reset();
+            document.getElementById('formBuatResi').style.display = 'block';
+            document.getElementById('hasilResi').classList.remove('show');
+            hitungTotal();
+        }
+
+        // Cek Resi Ini
+        function cekResiIni() {
+            const nomor = document.getElementById('displayNomorResi').textContent;
+            document.getElementById('inputResi').value = nomor;
+            showPage('cek-resi');
+            handleCekResi({ preventDefault: () => {} });
+        }
+
+        // Handle Cek Resi
+        function handleCekResi(e) {
+            if (e.preventDefault) e.preventDefault();
+            
+            const nomor = document.getElementById('inputResi').value.trim() || 
+                         document.getElementById('quickTrackInput').value.trim();
+            const data = Database.get(nomor);
+            const container = document.getElementById('trackingResult');
+            
+            if (!data) {
+                container.innerHTML = `
+                    <div style="text-align: center; padding: 4rem; background: #fff5f5; border-radius: 16px;">
+                        <div style="font-size: 4rem; margin-bottom: 1rem;">📭</div>
+                        <h3 style="color: #c53030; margin-bottom: 0.5rem;">Nomor Resi Tidak Ditemukan</h3>
+                        <p style="color: #718096;">Pastikan nomor resi benar atau buat pengiriman baru</p>
+                    </div>
+                `;
+                container.classList.add('show');
+                showToast('Nomor resi tidak ditemukan dalam sistem', 'error');
+                return;
+            }
+            
+            renderTracking(data);
+            container.classList.add('show');
+            showToast('Status pengiriman ditemukan!', 'success');
+        }
+
+        // Quick Track
+        function handleQuickTrack(e) {
+            e.preventDefault();
+            const nomor = document.getElementById('quickTrackInput').value.trim();
+            document.getElementById('inputResi').value = nomor;
+            showPage('cek-resi');
+            handleCekResi({ preventDefault: () => {} });
+        }
+
+        // Render Tracking
+        function renderTracking(data) {
+            const container = document.getElementById('trackingResult');
+            const statusClass = getStatusClass(data.status);
+            
+            let historyHtml = '';
+            data.history.forEach((h, i) => {
+                const isCurrent = i === 0;
+                historyHtml += `
+                    <div class="timeline-item ${isCurrent ? 'current' : 'completed'}">
+                        <div class="timeline-content">
+                            <div class="timeline-date">${h.tanggal}</div>
+                            <div class="timeline-status">${h.status}</div>
+                            <div class="timeline-location">📍 ${h.lokasi}</div>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = `
+                <div class="tracking-header">
+                    <div class="tracking-header-content">
+                        <div class="tracking-main-info">
+                            <h3>Nomor Resi</h3>
+                            <div class="tracking-number">${data.nomor}</div>
+                            <span class="status-badge ${statusClass}">${data.status}</span>
+                        </div>
+                        <div style="text-align: right;">
+                            <p style="opacity: 0.8; font-size: 0.9rem; margin-bottom: 0.25rem;">Dikirim Pada</p>
+                            <p style="font-weight: 700; font-size: 1.1rem;">${new Date(data.tanggal).toLocaleString('id-ID')}</p>
+                            <p style="opacity: 0.8; font-size: 0.85rem; margin-top: 1rem;">Estimasi Tiba</p>
+                            <p style="font-weight: 700;">${new Date(data.estimasiTiba).toLocaleDateString('id-ID')}</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tracking-info-grid">
+                        <div class="tracking-info-item">
+                            <h4>Pengirim</h4>
+                            <p>${data.pengirim}</p>
+                            <small style="opacity: 0.7;">${data.telpPengirim}</small>
+                        </div>
+                        <div class="tracking-info-item">
+                            <h4>Penerima</h4>
+                            <p>${data.penerima}</p>
+                            <small style="opacity: 0.7;">${data.telpPenerima}</small>
+                        </div>
+                        <div class="tracking-info-item">
+                            <h4>Layanan</h4>
+                            <p>${data.layanan}</p>
+                        </div>
+                        <div class="tracking-info-item">
+                            <h4>Berat & Biaya</h4>
+                            <p>${data.berat} • ${formatRupiah(data.biaya)}</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tracking-timeline">
+                    <h3 style="margin-bottom: 1.5rem; color: #1a1a2e;">Status Pengiriman</h3>
+                    <div class="timeline-list">
+                        ${historyHtml}
+                    </div>
+                </div>
+            `;
+        }
+
+        function getStatusClass(status) {
+            if (status === 'Terkirim') return 'status-terkirim';
+            if (['Dikirim', 'Dalam Perjalanan', 'Out for Delivery'].includes(status)) return 'status-dikirim';
+            return 'status-diproses';
+        }
+
+        // Handle Update Status
+        function handleUpdateStatus(e) {
+            e.preventDefault();
+            
+            const nomor = document.getElementById('updateNomorResi').value.trim();
+            const status = document.getElementById('updateStatus').value;
+            const lokasi = document.getElementById('updateLokasi').value;
+            const keterangan = document.getElementById('updateKeterangan').value;
+            
+            if (!nomor || !status) {
+                showToast('Isi nomor resi dan status', 'error');
+                return;
+            }
+            
+            const data = Database.get(nomor);
+            if (!data) {
+                showToast('Nomor resi tidak ditemukan', 'error');
+                return;
+            }
+            
+            const historyItem = {
+                tanggal: new Date().toLocaleString('id-ID'),
+                status: status + (keterangan ? ` - ${keterangan}` : ''),
+                lokasi: lokasi || 'Hub',
+                completed: true
+            };
+            
+            Database.addHistory(nomor, historyItem);
+            
+            // Update status utama jika perlu
+            let newStatus = data.status;
+            if (status === 'Terkirim') newStatus = 'Terkirim';
+            else if (['Out for Delivery', 'Dalam Perjalanan'].some(s => status.includes(s))) newStatus = 'Dikirim';
+            
+            Database.update(nomor, { status: newStatus });
+            
+            updateStats();
+            showToast('Status berhasil diupdate!', 'success');
+            
+            e.target.reset();
+            
+            // Refresh if on tracking page
+            if (document.getElementById('cek-resi').classList.contains('active') && 
+                document.getElementById('inputResi').value === nomor) {
+                handleCekResi({ preventDefault: () => {} });
+            }
+        }
+
+        // Load Daftar Resi
+        function loadDaftarResi() {
+            const allData = Object.values(Database.getAll()).sort((a, b) => 
+                new Date(b.tanggal) - new Date(a.tanggal)
+            );
+            
+            const tbody = document.getElementById('tabelResi');
+            
+            if (allData.length === 0) {
+                tbody.innerHTML = `
+                    <tr>
+                        <td colspan="6" style="text-align: center; padding: 3rem; color: #888;">
+                            Belum ada data pengiriman
+                        </td>
+                    </tr>
+                `;
+                return;
+            }
+            
+            tbody.innerHTML = allData.map(data => {
+                const statusClass = getStatusClass(data.status);
+                return `
+                    <tr>
+                        <td><strong style="font-family: monospace; color: #ff6b35;">${data.nomor}</strong></td>
+                        <td>${new Date(data.tanggal).toLocaleDateString('id-ID')}</td>
+                        <td>
+                            <div style="font-weight: 600;">${data.pengirim}</div>
+                            <div style="font-size: 0.85rem; color: #888;">→ ${data.penerima}</div>
+                        </td>
+                        <td>${data.layanan}</td>
+                        <td><span class="table-status ${statusClass}">${data.status}</span></td>
+                        <td>
+                            <button class="btn-secondary btn-table" onclick="trackFromTable('${data.nomor}')">Lacak</button>
+                        </td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        function trackFromTable(nomor) {
+            document.getElementById('inputResi').value = nomor;
+            showPage('cek-resi');
+            handleCekResi({ preventDefault: () => {} });
+        }
+
+        // Update Stats
+        function updateStats() {
+            const stats = Database.getStats();
+            document.getElementById('statTotal').textContent = stats.total;
+            document.getElementById('statProses').textContent = stats.diproses;
+            document.getElementById('statKirim').textContent = stats.dikirim;
+            document.getElementById('statSelesai').textContent = stats.terkirim;
+        }
+
+        // Toast Notification
+        function showToast(message, type = 'success') {
+            const container = document.getElementById('toastContainer');
+            const toast = document.createElement('div');
+            toast.className = `toast ${type}`;
+            
+            const icons = {
+                success: '✓',
+                error: '✕',
+                info: 'ℹ'
+            };
+            
+            toast.innerHTML = `<span style="font-size: 1.2rem;">${icons[type]}</span> ${message}`;
+            container.appendChild(toast);
+            
+            setTimeout(() => toast.classList.add('show'), 10);
+            setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => toast.remove(), 300);
+            }, 3000);
+        }
+
+        // Demo Data
+        function createDemoData() {
+            if (Object.keys(Database.getAll()).length === 0) {
+                const demoNomor = 'KA-20240312-DEMO';
+                const demoData = {
+                    nomor: demoNomor,
+                    pengirim: 'PT Maju Jaya Indonesia',
+                    telpPengirim: '021-5550123',
+                    alamatPengirim: 'Jl. Thamrin No. 10, Jakarta Pusat',
+                    penerima: 'Budi Santoso',
+                    telpPenerima: '081234567890',
+                    alamatPenerima: 'Jl. Sudirman No. 25, Bandung',
+                    layanan: 'Express',
+                    berat: '3.5 kg',
+                    isiPaket: 'Dokumen Kontrak & Sample Produk',
+                    biaya: 70000,
+                    tanggal: new Date(Date.now() - 172800000).toISOString(),
+                    estimasiTiba: new Date(Date.now() + 86400000).toISOString(),
+                    status: 'Dikirim',
+                    history: [
+                        {
+                            tanggal: new Date(Date.now() - 3600000).toLocaleString('id-ID'),
+                            status: 'Paket Dalam Perjalanan ke Kota Tujuan',
+                            lokasi: 'Cikampek Toll Road',
+                            completed: true
+                        },
+                        {
+                            tanggal: new Date(Date.now() - 28800000).toLocaleString('id-ID'),
+                            status: 'Tiba di Sortir Hub Jakarta',
+                            lokasi: 'Jakarta',
+                            completed: true
+                        },
+                        {
+                            tanggal: new Date(Date.now() - 86400000).toLocaleString('id-ID'),
+                            status: 'Paket Diproses & Dikemas',
+                            lokasi: 'Jakarta Origin Hub',
+                            completed: true
+                        },
+                        {
+                            tanggal: new Date(Date.now() - 172800000).toLocaleString('id-ID'),
+                            status: 'Resi Dibuat - Menunggu Pickup',
+                            lokasi: 'Jakarta',
+                            completed: true
+                        }
+                    ]
+                };
+                
+                Database.save(demoNomor, demoData);
+                updateStats();
+            }
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            createDemoData();
+            updateStats();
+        });
+    </script>
+</body>
+</html>
